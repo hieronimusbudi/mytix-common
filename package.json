@@ -1,5 +1,5 @@
 {
-  "name": "@mytix/common",
+  "name": "@hbsmytix/common",
   "version": "1.0.0",
   "description": "",
   "main": "./build/index.js",
@@ -23,7 +23,8 @@
   },
   "scripts": {
     "clean": "del ./build/*",
-    "build": "npm run clean && tsc"
+    "build": "tsc",
+    "pub": "git add . && git commit -m \"Updates with pub cmd\" && npm version patch && npm run build && npm publish"
   },
   "author": "",
   "license": "ISC"
